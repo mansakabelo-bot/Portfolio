@@ -1,47 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Cash - Get Started Today</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero {
+            text-align: center;
+            color: white;
+            padding: 60px 20px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            line-height: 1.1;
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #ffd700, #ffed4e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+            color: #333;
+            padding: 20px 50px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 80px;
+            padding: 0 20px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 60px;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+            color: white;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .cta-button {
+                padding: 15px 35px;
+                font-size: 1.1rem;
+            }
+        }
+
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+    </style>
 </head>
-
 <body>
-    <div class="main">
-        <div class="navbar">
-            <img src="imgs/WhatsApp_Image_2024-11-26_at_8.16.29_PM-removebg-preview.png" class="leads">
+    <div class="container">
+        <div class="hero">
+            <div class="badge">🔥 LIMITED TIME OFFER</div>
+            <h1 class="floating">
+                Get <span class="gradient-text">FREE CASH</span><br>Today
+            </h1>
+            <p class="subtitle">Start earning money instantly. No hidden fees. No strings attached.</p>
+            <a href="https://glitchy.go2cloud.org/aff_c?offer_id=3261&aff_id=14596" class="cta-button">
+                Claim Your Free Cash Now →
+            </a>
 
-            <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">BIO</a></li>
-                <li><a href="#">SKILLS</a></li>
-                <li><a href="#">PORTFOLIO</a></li>
-                <li><a href="#">PITCH</a></li>
-            </ul>
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-number">$500K+</span>
+                    <span class="stat-label">Paid Out</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">50K+</span>
+                    <span class="stat-label">Active Users</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">4.8★</span>
+                    <span class="stat-label">User Rating</span>
+                </div>
+            </div>
         </div>
-        <div class="info">
-            <h3>Hi, I'm <span> Kabelo</span></h3>
-            <h1><span>D</span>IGITAL <span>M</span>ARKETER</h1>
-            <h3>Performance Marketer <br> Proficient in Lead Generation & <br>Financial Analysis</h3>
-            <a href="#">Hire Me</a>
+
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Instant Access</h3>
+                <p>Get started immediately with our streamlined sign-up process. No waiting, no delays.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <h3>Real Money</h3>
+                <p>Earn actual cash that you can withdraw directly to your account. It's that simple.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>100% Secure</h3>
+                <p>Your information is protected with bank-level security. We take your privacy seriously.</p>
+            </div>
         </div>
-        <div class="image">
-            <img src="imgs/me2.png" class="me2">
-        </div>
-        <div class="icons">
-            <a href="#">
-                <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-            <a href="#">
-                <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-            <a href="#">
-                <ion-icon name="logo-linkedin"></ion-icon>
+
+        <div class="hero" style="margin-top: 80px;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 30px;">Ready to Get Started?</h2>
+            <a href="https://glitchy.go2cloud.org/aff_c?offer_id=3261&aff_id=14596" class="cta-button">
+                Claim Your Free Cash Now →
             </a>
         </div>
     </div>
-    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </body>
-
-
 </html>
